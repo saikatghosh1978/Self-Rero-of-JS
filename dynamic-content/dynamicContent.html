@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Dynamic Content</title>
+
+<meta charset = "UTF-8">
+
+<script src="scripts/changeContent.js"></script>
+
+<link rel="stylesheet" href="css/style.css"/>
+
+</head>
+
+<body>
+<div id="wrapper">
+
+<div id="container">
+
+<div id="info">
+
+<p id="title">Piano Concerto #1</p>
+<p id="artist">Greg Wilson</p>
+<p id="date">Recorded May 21, 2014</p>
+<img src="images/music_note.png" alt="Musical note graphic" id="note" />
+
+</div><!-- end info -->
+
+</div><!-- end container -->
+
+<ul id="links">
+
+<li><a href="#" onclick = "changeContent ('title', 'Piano Concerto # 1', 'artist', 'Greg Wilson', 'date', 'Recorded May 21, 2014')">Piano Concerto # 1</a></li>
+
+<li><a href="#" onclick = "changeContent ('title', 'Guitar Solo', 'artist', 'Ron Smith', 'date', 'Recorded June 1, 2014')">Guitar Solo</a></li>
+
+<li><a href="#" onclick = "changeContent ('title', 'Piano Concerto # 2', 'artist', 'Emily Granger', 'date', 'Recorded May 25, 2014')">Piano Concerto # 2</a></li>
+
+</ul>
+
+</div><!-- end wrapper -->
+</body>
+</html>

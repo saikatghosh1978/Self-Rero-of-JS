@@ -1,0 +1,51 @@
+#wrapper {
+    font-family: sans-serif;
+}
+        
+#container {
+    margin-top: 50px;
+    padding-top: 34px;
+    padding-bottom: 17px;
+    font-size: 25px;
+    border: 1px solid #e4e4eb;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #888888;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 15px;
+}
+
+#info {
+    margin-left: -100px;   
+}
+
+#note {
+    float: right;
+    margin-top: -116px;
+}
+
+#title, #artist, #date {
+    text-align: center;   
+}
+
+#title {
+    margin-top: -2px;
+}
+
+#artist {
+    margin-top: -10px;
+}
+
+#date {
+    font-size: 17px; 
+    font-style: italic;
+    margin-top: -12px;
+}
+
+#links {
+    list-style-type: none;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 50px;
+}
