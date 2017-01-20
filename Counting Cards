@@ -1,0 +1,46 @@
+//Exam:- https://github.com/Rafase282/My-FreeCodeCamp-Code/wiki/Lesson-Review-Counting-Cards
+//https://www.freecodecamp.com/challenges/counting-cards#?solution=%0Avar%20count%20%3D%200%3B%0A%0A
+function%20cc(card)%20%7B%0A%20%20%2F%2F%20Only%20change%20code%20below%20this%20line%0A%20%20%20switch%20(card)%7B%0A%20%20%20%20
+case%202%3A%0A%20%20%20%20case%203%3A%0A%20%20%20%20case%204%3A%0A%20%20%20%20case%205%3A%0A%20%20%20%20
+case%206%3A%0A%20%20%20%20%20%20count%2B%3D1%3B%0A%20%20%20%20%20%20break%3B%0A%20%20%20%20case%207%3A%0A%20%20%20%20
+case%208%3A%0A%20%20%20%20case%209%3A%0A%20%20%20%20%20%20count%2B%3D0%3B%0A%20%20%20%20%20%20break%3B%0A%20%20%20%20
+case%2010%3A%0A%20%20%20%20case%20'J'%3A%0A%20%20%20%20case%20'Q'%3A%0A%20%20%20%20case%20'K'%3A%0A%20%20%20%20
+case%20'A'%3A%0A%20%20%20%20%20%20count-%3D%201%3B%0A%20%20%20%20%20%20break%3B%0A%20%20%7D%0A%0A%20%20return%20
+count%20%2B%20(count%20%3E%200%20%3F%20%22%20Bet%22%20%3A%20%22%20Hold%22)%3B%0A%20%20%2F%2F%20Only%20change%20
+code%20above%20this%20line%0A%7D%0A%0A%2F%2F%20Add%2Fremove%20calls%20to%20test%20your%20function.%0A%2F%2F%20
+Note%3A%20Only%20the%20last%20will%20display%0Acc(2)%3B%20cc(3)%3B%20cc(7)%3B%20cc('K')%3B%20cc('A')%3B%0A
+
+
+var count = 0;
+
+function cc(card) {
+  // Only change code below this line
+   switch (card){
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count+=1;
+      break;
+    case 7:
+    case 8:
+    case 9:
+      count+=0;
+      break;
+    case 10:
+    case 'J':
+    case 'Q':
+    case 'K':
+    case 'A':
+      count-= 1;
+      break;
+  }
+
+  return count + (count > 0 ? " Bet" : " Hold");
+  // Only change code above this line
+}
+
+// Add/remove calls to test your function.
+// Note: Only the last will display
+cc(2); cc(3); cc(7); cc('K'); cc('A');
