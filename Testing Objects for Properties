@@ -1,0 +1,26 @@
+// https://www.freecodecamp.com/challenges/testing-objects-for-properties#?solution=%0A%2F%2F%20Setup%0Avar%20
+myObj%20%3D%20%7B%0A%20%20gift%3A%20%22pony%22%2C%0A%20%20pet%3A%20%22kitten%22%2C%0A%20%20bed%3A%20%22sleigh%22%0A%7D%3B%0A%0A
+function%20checkObj(checkProp)%20%7B%0A%20%20%2F%2F%20Your%20Code%20Here%0A%20%20if
+(myObj.hasOwnProperty(checkProp)%3D%3D%3Dtrue)%20%7B%0A%20%20return%20myObj%5BcheckProp%5D%3B%0A%20%20%7Delse%20
+return%20%22Not%20Found%22%3B%0A%7D%0A%0A%2F%2F%20Test%20your%20code%20by%20modifying%20these%20values%0AcheckObj(%22house%22)%3B%0A
+//Sometimes it is useful to check if the property of a given object exists or not. We can use the .hasOwnProperty(propname) 
+method of objects to determine if that object has the given property name. .hasOwnProperty() returns true or false if the property 
+is found or not.
+
+
+// Setup
+var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+  // Your Code Here
+  if(myObj.hasOwnProperty(checkProp)===true) {
+  return myObj[checkProp];
+  }else return "Not Found";
+}
+
+// Test your code by modifying these values
+checkObj("house");
