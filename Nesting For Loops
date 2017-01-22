@@ -1,0 +1,24 @@
+https://www.freecodecamp.com/challenges/nesting-for-loops#?solution=%0Afunction%20multiplyAll(arr)%20%7B%0A%20%20var%20
+product%20%3D%201%3B%0A%20%20%2F%2F%20Only%20change%20code%20below%20this%20line%0A%20%20for%20(var%20i%3D0%3B%20i%3
+Carr.length%3B%20i%2B%2B)%20%7B%0A%20%20%20%20for%20(var%20j%3D0%3B%20j%3Carr%5Bi%5D.length%3B%20j%2B%2B)%20%7B%0A%20%20%20%20%20%20
+console.log(%5Bj%5D)%3B%0A%20%20%20%20%20%20product%20%20%3D%20product%20*%20arr%5Bi%5D%5Bj%5D%3B%0A%20%20%20%20%7D%0
+A%20%20%7D%0A%20%20%2F%2F%20Only%20change%20code%20above%20this%20line%0A%20%20return%20product%3B%0A%7D%0A%0A%2F%2F%20
+Modify%20values%20below%20to%20test%20your%20code%0AmultiplyAll(%5B%5B1%2C2%5D%2C%5B3%2C4%5D%2C%5B5%2C6%2C7%5D%5D)%3B%0A%0A
+
+// Nesting For Loops
+
+function multiplyAll(arr) {
+  var product = 1;
+  // Only change code below this line
+  for (var i=0; i<arr.length; i++) {
+    for (var j=0; j<arr[i].length; j++) {
+      console.log([j]);
+      product  = product * arr[i][j];
+    }
+  }
+  // Only change code above this line
+  return product;
+}
+
+// Modify values below to test your code
+multiplyAll([[1,2],[3,4],[5,6,7]]);
