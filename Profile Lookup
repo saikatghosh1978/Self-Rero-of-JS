@@ -1,0 +1,65 @@
+https://www.freecodecamp.com/challenges/profile-lookup#?solution=%0A%2F%2FSetup%0Avar%20contacts%20%3D%20%5B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%22firstName%22%3A%20%22Akira%22%2C%0A%20%20%20%20%20%20%20%20%22lastName%22%3A%20%22Laine%22%2C%0A%20%20%20%20%20%20%20%20%22number%22%3A%20%220543236543%22%2C%0A%20%20%20%20%20%20%20%20%22likes%22%3A%20%5B%22Pizza%22%2C%20%22Coding%22%2C%20%22Brownie%20Points%22%5D%0A%20%20%20%20%7D%2C%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%22firstName%22%3A%20%22Harry%22%2C%0A%20%20%20%20%20%20%20%20%22lastName%22%3A%20%22Potter%22%2C%0A%20%20%20%20%20%20%20%20%22number%22%3A%20%220994372684%22%2C%0A%20%20%20%20%20%20%20%20%22likes%22%3A%20%5B%22Hogwarts%22%2C%20%22Magic%22%2C%20%22Hagrid%22%5D%0A%20%20%20%20%7D%2C%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%22firstName%22%3A%20%22Sherlock%22%2C%0A%20%20%20%20%20%20%20%20%22lastName%22%3A%20%22Holmes%22%2C%0A%20%20%20%20%20%20%20%20%22number%22%3A%20%220487345643%22%2C%0A%20%20%20%20%20%20%20%20%22likes%22%3A%20%5B%22Intriguing%20Cases%22%2C%20%22Violin%22%5D%0A%20%20%20%20%7D%2C%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%22firstName%22%3A%20%22Kristian%22%2C%0A%20%20%20%20%20%20%20%20%22lastName%22%3A%20%22Vos%22%2C%0A%20%20%20%20%20%20%20%20%22number%22%3A%20%22unknown%22%2C%0A%20%20%20%20%20%20%20%20%22likes%22%3A%20%5B%22Javascript%22%2C%20%22Gaming%22%2C%20%22Foxes%22%5D%0A%20%20%20%20%7D%0A%5D%3B%0A%0A%0Afunction%20lookUpProfile(firstName%2C%20prop)%7B%0A%2F%2F%20Only%20change%20code%20below%20this%20line%0Afor%20(var%20i%20%3D%200%3B%20i%20%3C%20contacts.length%3B%20i%2B%2B)%20%7B%0A%20%20%20%20if%20(contacts%5Bi%5D.firstName%20%3D%3D%3D%20firstName)%20%7B%0A%20%20%20%20%20%20if%20(typeof(contacts%5Bi%5D%5Bprop%5D)%20!%3D%20%22undefined%22)%20%7B%0A%20%20%20%20%20%20%20%20return%20contacts%5Bi%5D%5Bprop%5D%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20else%20%7B%0A%20%20%20%20%20%20%20%20return%20%22No%20such%20property%22%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20return%20%22No%20such%20contact%22%3B%0A%2F%2F%20Only%20change%20code%20above%20this%20line%0A%7D%0A%0A%2F%2F%20Change%20these%20values%20to%20test%20your%20function%0AlookUpProfile(%22Akira%22%2C%20%22likes%22)%3B%0A
+////////////////////// Profile Lookup ////////////////////////////////////
+
+///////////////////////////////////////////////////
+We have an array of objects representing different people in our contacts lists.
+
+A lookUpProfile function that takes firstName and a property (prop) as arguments has been pre-written for you.
+
+The function should check if firstName is an actual contact's firstName and the given property (prop) is a property of that contact.
+
+If both are true, then return the "value" of that property.
+
+If firstName does not correspond to any contacts then return "No such contact"
+
+If prop does not correspond to any valid properties then return "No such property"
+////////////////////////////////////////////////////
+
+
+//Setup
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["Javascript", "Gaming", "Foxes"]
+    }
+];
+
+
+function lookUpProfile(firstName, prop){
+// Only change code below this line
+for (var i = 0; i < contacts.length; i++) {
+    if (contacts[i].firstName === firstName) {
+      if (typeof(contacts[i][prop]) != "undefined") {
+        return contacts[i][prop];
+      }
+      else {
+        return "No such property";
+      }
+    }
+  }
+  return "No such contact";
+// Only change code above this line
+}
+
+// Change these values to test your function
+lookUpProfile("Akira", "likes");
